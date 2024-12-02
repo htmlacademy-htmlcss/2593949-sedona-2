@@ -2,7 +2,7 @@
 
 * Студент: [Александр Рахманенко](https://up.htmlacademy.ru/htmlcss-individual/2/user/2593949).
 * Наставник: [Виталий Драгулин](https://htmlacademy.ru/profile/id1008501).
-
+* Сайт: [Мой проект седона](https://alexander-maxx.github.io/2593949-sedona-2/)
 ---
 
 _Не удаляйте и не обращайте внимание на файлы:_<br>
