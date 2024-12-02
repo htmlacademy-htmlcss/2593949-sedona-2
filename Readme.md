@@ -1,7 +1,7 @@
 # Личный проект «Седона»
 
 * Студент: [Александр Рахманенко](https://up.htmlacademy.ru/htmlcss-individual/2/user/2593949).
-* Наставник: `Неизвестно`.
+* Наставник: [Виталий Драгулин](https://htmlacademy.ru/profile/id1008501).
 
 ---
 
