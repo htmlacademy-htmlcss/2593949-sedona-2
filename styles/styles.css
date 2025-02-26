@@ -305,7 +305,6 @@ main {
   display: flex;
   margin: 0;
   padding: 0;
-  justify-content: space-between;
   flex-wrap: wrap;
   list-style-type: none;
 }
@@ -349,7 +348,6 @@ main {
   display: flex;
   flex-direction: column;
   gap: 30px;
-  justify-content: space-between;
 }
 
 .servise-item h3, .servise-item p {
@@ -547,8 +545,8 @@ main {
 }
 
 .htmlacademy-logo {
- vertical-align: middle;
- text-align: center;
+  vertical-align: middle;
+  text-align: center;
 }
 
 .footer-social-vk {
@@ -656,7 +654,7 @@ main {
   align-items: flex-end;
   justify-content: space-between;
   gap: 70px;
-  max-width: 600px;
+  max-width: 550px;
 }
 
 .filter-infrastructure-title, .filter-catalog-title, .filter-cost-title {
@@ -674,6 +672,56 @@ main {
   color: #ffffff;
 }
 
+.filter-cost-group {
+  margin: 0;
+  padding: 0;
+  max-width: 288px;
+  border: 0;
+}
+
+.filter-cost-title {
+  margin-bottom: 32px;
+}
+
+.filter-cost-min, .filter-cost-max {
+  margin: 0;
+}
+
+.container-cost {
+  display: grid;
+  grid-template-columns: 143px 143px;
+  gap: 2px;
+}
+
+.min-price, .max-price {
+  font-family: "PT Sans", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  color: #000000;
+  background: #f2f2f2;
+  border: 0;
+  width: 143px;
+  margin: 0;
+  padding: 0;
+  display: block;
+  box-sizing: border-box;
+  min-height: 48px;
+  margin-bottom: 36px;
+}
+
+.min-price {
+  border-radius: 4px 0 0 4px;
+}
+
+.max-price {
+  border-radius: 0 4px 4px 0;
+}
+
+.container-cost input {
+  text-align: end;
+}
+
 .button-submit {
   font-family: "PT Sans", sans-serif;
   font-weight: 700;
@@ -688,6 +736,7 @@ main {
   padding: 8px;
   overflow-wrap: break-word;
   text-align: center;
+  cursor: pointer;
 }
 
 .button-reset {
@@ -704,11 +753,7 @@ main {
   padding: 8px;
   overflow-wrap: break-word;
   text-align: center;
-}
-
-.filter-cost-group {
-  margin: 0;
-  padding: 0;
+  cursor: pointer;
 }
 
 .filter-infrastructure-list {
@@ -718,10 +763,8 @@ main {
 }
 
 .filter-button-container {
-  min-width: 191px;
-  max-width: 200px;
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 191px;
   gap: 32px;
 }
 
@@ -922,13 +965,6 @@ main {
   background-repeat: no-repeat;
   margin: 0;
   align-self: center;
-}
-
-.hotels-card-stars-4 {
-  width: 18px;
-  height: 17px;
-  display: flex;
-  gap: 8px;
 }
 
 .hotels-card-rating {

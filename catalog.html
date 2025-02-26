@@ -109,7 +109,17 @@
               <div class="filter-cost-container">
                 <fieldset class="filter-cost-group">
                   <legend class="filter-cost-title">Стоимость, ₽:</legend>
-                  <!-- добавить шкалу!!! -->
+                  <div class="container-cost">
+                    <p class="filter-cost-min">
+                      <label class="visually-hidden" for="min-price">Минимальная цена.</label>
+                      <input class="min-price" type="number" id="min-price" name="min-price" placeholder="от">
+                    </p>
+                    <p class="filter-cost-max">
+                      <label class="visually-hidden" for="max-price">Максимальная цена.</label>
+                      <input class="max-price" type="number" id="max-price" name="max-price" placeholder="до">
+                    </p>
+                    <!-- добавить шкалу!!! -->
+                  </div>
                 </fieldset>
                 <div class="filter-button-container">
                   <button class="button-submit" type="submit">Применить</button>
