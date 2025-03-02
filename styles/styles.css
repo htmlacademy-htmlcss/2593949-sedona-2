@@ -200,6 +200,11 @@ main {
   flex-wrap: wrap;
   gap: 0;
   list-style-type: none;
+  justify-content: center;
+}
+
+.advantages-item {
+  flex-grow: 1;
 }
 
 .advantages-item-wide {
@@ -219,6 +224,12 @@ main {
   background-color: rgba(131, 179, 211, 0.2);
 }
 
+.advantages-text-additional-container h3, .advantages-text-additional-container p {
+  margin: 0;
+  max-width: 230px;
+  overflow-wrap: break-word;
+}
+
 .advantages-title-wide {
   font-weight: 700;
   font-size: 24px;
@@ -226,7 +237,7 @@ main {
   text-transform: uppercase;
 }
 
-.advantages-title {
+.advantages-text-additional-container .advantages-title {
   font-weight: 700;
   font-size: 24px;
   line-height: 28px;
@@ -234,13 +245,10 @@ main {
   max-width: 175px;
 }
 
-.advantages-text-additional-container h3, .advantages-text-additional-container p {
-  margin: 0;
-}
-
 .advantages-text-additional-container {
-  width: 400px;
+  width: 100%;
   min-height: 385px;
+  height: 100%;
   text-align: center;
   padding: 102px 85px;
   box-sizing: border-box;
@@ -248,10 +256,7 @@ main {
   flex-wrap: wrap;
   flex-direction: column;
   align-items: center;
-}
-
-.advantages-item-light .advantages-text-additional-container, .advantages-item-dark .advantages-text-additional-container {
-  padding: 113px 85px;
+  justify-content: center;
 }
 
 .advantages-text-additional-container h3 {
@@ -348,10 +353,13 @@ main {
   display: flex;
   flex-direction: column;
   gap: 30px;
+  align-items: center;
 }
 
 .servise-item h3, .servise-item p {
   margin: 0;
+  max-width: 230px;
+  overflow-wrap: break-word;
 }
 
 /*Заинтересовались*/
