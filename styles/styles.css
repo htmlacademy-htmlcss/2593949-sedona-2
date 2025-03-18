@@ -202,7 +202,7 @@ main {
   min-height: 485px;
   background-color: #000000;
   background-image: url(../images/welcome-background-divider.png), url(../images/welcome-background.jpg);
-  background-size: 100% auto, cover;
+  background-size: contain, cover;
   background-repeat: no-repeat;
   background-position: left bottom, left top;
   color: #2be821;
@@ -405,41 +405,25 @@ main {
   background-color: #ffffff;
 }
 
-.servise-icon {
-  width: 75px;
-  height: 72px;
-  order: -1;
-  position: relative;
-}
-
-.servise-icon::before {
-  content: "";
-  background-repeat: no-repeat;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.servise-icon-house::before {
-  width: 75px;
-  height: 72px;
+.servise-item-house {
   background-image: url(../images/house.svg);
-  background-size: 75px 72px;
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: 81px;
 }
 
-.servise-icon-meal::before {
-  width: 74px;
-  height: 70px;
+.servise-item-meal {
   background-image: url(../images/food.svg);
-  background-size: 74px 70px;
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: 82px;
 }
 
-.servise-icon-souvenir::before {
-  width: 64px;
-  height: 76px;
+.servise-item-souvenir {
   background-image: url(../images/souvenir.svg);
-  background-size: 64px 76px;
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: 79px;
 }
 
 .servise-title {
@@ -460,6 +444,10 @@ main {
   overflow-wrap: break-word;
 }
 
+.servise-item h3 {
+  margin-top: 102px;
+}
+
 /*Заинтересовались*/
 
 .search {
@@ -469,7 +457,6 @@ main {
   align-items: center;
   gap: 54px;
   padding: 96px 0;
-
 }
 
 .search-text-container {
@@ -562,6 +549,7 @@ main {
   font-weight: 700;
   font-size: 30px;
   line-height: 36px;
+  text-align: center;
   text-transform: uppercase;
   max-width: 475px;
   margin: 0;
@@ -780,22 +768,19 @@ main {
 
 .breadcrumbs-link-main {
   width: 13px;
-  height: 21px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  height: 15px;
+  background-image: url(../images/home-breadcrumbs.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: block;
 }
 
-.breadcrumbs-link-main svg {
-  fill: #ffffff;
+.breadcrumbs-link-main:hover {
+  opacity: 0.6;
 }
 
-.breadcrumbs-link-main:hover path, .breadcrumbs-link:hover {
-  fill: #FFFFFF99;
-}
-
-.breadcrumbs-link-main:active path, .breadcrumbs-link-main:active {
-  fill: #FFFFFF4D;
+.breadcrumbs-link-main:active {
+  opacity: 0.3;
   outline: none;
   cursor: default;
 }
@@ -814,15 +799,20 @@ main {
   position: absolute;
   width: 8px;
   height: 21px;
-  top: 0;
-  right: -18px;
+  right: 0%;
+  top: 50%;
+  transform: translate(18px, -50%);
 }
 
 .breadcrumbs-item:last-child::after {
   content: none;
 }
 
-.breadcrumbs-link {
+.breadcrumbs-item:last-child {
+  margin: 0;
+}
+
+.breadcrumbs-link-current {
   font-weight: 400;
   font-size: 16px;
   line-height: 21px;
@@ -831,12 +821,12 @@ main {
   text-decoration: none;
 }
 
-.breadcrumbs-link:hover {
-  color: #FFFFFF99;
+.breadcrumbs-link-current:hover {
+  opacity: 0.6;
 }
 
-.breadcrumbs-link:active {
-  color: #FFFFFF4D;
+.breadcrumbs-link-current:active {
+  opacity: 0.3;
   outline: none;
   cursor: default;
 }
@@ -1044,7 +1034,7 @@ main {
   display: flex;
   flex-direction: column;
   padding: 50px 70px 60px;
-  gap: 80px;
+  gap: 40px;
 }
 
 /*Найдено гостиниц, вид отображения*/
@@ -1166,18 +1156,10 @@ main {
   flex-wrap: wrap;
   margin: 0;
   padding: 0;
+  padding-bottom: 40px;
   gap: 20px;
   list-style-type: none;
-  position: relative;
-}
-
-.hotels-list::after {
-  content: "";
-  position: absolute;
-  border-bottom: 1px solid #e5e5e5;
-  right: 0;
-  left: 0;
-  bottom: -41px;
+  box-shadow: 0 1px 0 0 #e5e5e5;
 }
 
 .hotels-card {
@@ -1201,6 +1183,7 @@ main {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
+  justify-content: space-between;  /*добавил для выравниванния звезд в контейнере*/
 }
 
 .hotels-card-title {
@@ -1314,22 +1297,41 @@ main {
   text-decoration: none;
 }
 
-.hotels-card-stars {
+/* прошлый вариант размещения звезд, закоменчен */
+
+/* .hotels-card-stars {
   max-width: 140px;
   display: grid;
   grid-template-columns: repeat(auto-fill, 18px);
   gap: 6px;
   margin: 0;
   align-self: center;
-}
+} */
 
-.stars::before  {
+/* .stars::before  {
   content: "";
   display: block;
   background-image: url(../images/star.svg);
   width: 18px;
   height: 17px;
   background-repeat: no-repeat;
+} */
+
+/* новый вариант размещения звезд */
+
+.hotels-card-stars {
+  background-image: url(../images/starsprob.svg);
+  background-repeat: no-repeat;
+  width: 140px;
+  margin: 0;
+}
+
+.hotels-stars-3 {
+  width: 66px;
+}
+
+.hotels-stars-2 {
+  width: 42px;
 }
 
 .hotels-card-rating {
