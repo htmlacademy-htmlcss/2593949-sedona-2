@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Город Седона</title>
+    <link rel="icon" href="favicon.ico">
     <link rel="stylesheet" href="styles/styles.css">
   </head>
   <body>
@@ -78,7 +79,7 @@
             </li>
             <li class="advantages-item advantages-item-wide">
               <div class="advantages-text-additional-container">
-                <h3 class="advantages-title-wide">Там есть мост дьявола</h3>
+                <h3 class="advantages-title-wide">Там есть<br>мост дьявола</h3>
                 <p class="advantages-description-wide">Да, по нему можно пройти! Если вы осмелитесь, разумеется</p>
               </div>
               <img class="advantages-img2" src="images/photo-2.jpg" width="800" height="385" alt="Коньон среди гор.">
@@ -176,6 +177,59 @@
           </a>
         </div>
       </footer>
+      <div class="modal-container modal-container-close">
+        <div class="modal-search">
+          <section class="modal-content">
+            <h2 class="modal-title">Поиск гостиницы в Седоне</h2>
+            <button class="modal-close-button">
+              <span class="visually-hidden">Закрыть</span>
+            </button>
+            <form class="modal-form" action="https://echo.htmlacademy.ru/" method="post">
+              <p class="field-group field-group-date">
+                <label class="field-text" for="search-date-arrival">Дата заезда:</label>
+                <span class="container-field-modal">
+                  <input class="field-modal-form" id="search-date-arrival" name="search-date-arrival" type="text" value="27 апреля 2020" placeholder="Укажите дату" required>
+                  <span class="comments-date error-date" id="error-date">Мы не можем отправить вас в прошлое.</span>
+                  <span class="placeholder-icon"></span>
+                </span>
+              </p>
+              <p class="field-group field-group-date">
+                <label class="field-text" for="search-date-departure">Дата выезда:</label>
+                <span class="container-field-modal">
+                  <input class="field-modal-form" id="search-date-departure" name="search-date-departure" type="text" value="1 сентября 2023" placeholder="Укажите дату" required>
+                  <span class="comments-date" id="comments-date">На эти даты есть свободные номера. Пока есть.</span>
+                  <span class="placeholder-icon"></span>
+                </span>
+              </p>
+              <div class="container-visitor">
+                <div class="field-group field-group-visitor">
+                  <label class="field-text field-text-visitor" for="quantity-visitor">Взрослые:</label>
+                  <div class="container-quantity">
+                    <input class="quantity-visitor" id="quantity-visitor" name="quantity-visitor" type="number" value="2" min="1" placeholder="1" required>
+                    <button class="decrease" type="button"></button>
+                    <button class="increase" type="button"></button>
+                  </div>
+                </div>
+                <div class="field-group field-group-visitor">
+                  <label class="field-text field-text-visitor-tooltip" for="quantity-children">Дети:
+                    <button class="tooltip-toggle" type="button" aria-labelledby="tooltip-label-date">
+                      <span class="tooltip-text" role="tooltip" id="tooltip-label-date">Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.</span>
+                    </button>
+                  </label>
+                  <div class="container-quantity">
+                    <input class="quantity-visitor" id="quantity-children" name="quantity-children" type="number" value="2" min="0" placeholder="0">
+                    <button class="decrease" type="button"></button>
+                    <button class="increase" type="button"></button>
+                  </div>
+                </div>
+              </div>
+              <button class="modal-search-button" type="submit">Найти
+                <span class="visually-hidden">Найти</span>
+              </button>
+            </form>
+          </section>
+        </div>
+      </div>
     </div>
   </body>
 </html>

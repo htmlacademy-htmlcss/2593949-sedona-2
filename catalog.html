@@ -64,20 +64,23 @@
                   <ul class="filter-infrastructure-list">
                     <li class="filter-infrastructure-item">
                       <label class="control">
-                        <input class="control-input" type="checkbox" name="pool" checked>
-                        Бассейн
+                        <input class="visually-hidden control-input" type="checkbox" name="pool" checked>
+                        <span class="control-mark"></span>
+                        <span class="control-label">Бассейн</span>
                       </label>
                     </li>
                     <li class="filter-infrastructure-item">
                       <label class="control">
-                        <input class="control-input" type="checkbox" name="parking" checked>
-                        Парковка
+                        <input class="visually-hidden control-input" type="checkbox" name="parking" checked>
+                        <span class="control-mark"></span>
+                        <span class="control-label">Парковка</span>
                       </label>
                     </li>
                     <li class="filter-infrastructure-item">
                       <label class="control">
-                        <input class="control-input" type="checkbox" name="wifi">
-                        Wi-Fi
+                        <input class="visually-hidden control-input" type="checkbox" name="wifi">
+                        <span class="control-mark"></span>
+                        <span class="control-label">Wi-Fi</span>
                       </label>
                     </li>
                   </ul>
@@ -87,20 +90,23 @@
                   <ul class="filter-infrastructure-list">
                     <li class="filter-infrastructure-item">
                       <label class="control">
-                        <input class="control-input" type="radio" name="housing-type" value="hotel" checked>
-                        Гостиница
+                        <input class="visually-hidden control-input" type="radio" name="housing-type" value="hotel" checked>
+                        <span class="control-mark control-mark-point"></span>
+                        <span class="control-label">Гостиница</span>
                       </label>
                     </li>
                     <li class="filter-infrastructure-item">
                       <label class="control">
-                        <input class="control-input" type="radio" name="housing-type" value="motel">
-                        Мотель
+                        <input class="visually-hidden control-input" type="radio" name="housing-type" value="motel">
+                        <span class="control-mark control-mark-point"></span>
+                        <span class="control-label">Мотель</span>
                       </label>
                     </li>
                     <li class="filter-infrastructure-item">
                       <label class="control">
-                        <input class="control-input" type="radio" name="housing-type" value="apartments">
-                        Апартаменты
+                        <input class="visually-hidden control-input" type="radio" name="housing-type" value="apartments">
+                        <span class="control-mark control-mark-point"></span>
+                        <span class="control-label">Апартаменты</span>
                       </label>
                     </li>
                   </ul>
@@ -112,13 +118,24 @@
                   <div class="container-cost">
                     <p class="filter-cost-min">
                       <label class="visually-hidden" for="min-price">Минимальная цена.</label>
-                      <input class="min-price" type="number" id="min-price" name="min-price" placeholder="от">
+                      <input class="price min-price" type="number" value="0" id="min-price" name="min-price" min="0" placeholder="0">
+                      <span class="placeholder">от</span>
                     </p>
                     <p class="filter-cost-max">
                       <label class="visually-hidden" for="max-price">Максимальная цена.</label>
-                      <input class="max-price" type="number" id="max-price" name="max-price" placeholder="до">
+                      <input class="price max-price" type="number" value="9000" id="max-price" name="max-price" min="0" placeholder="0">
+                      <span class="placeholder">до</span>
                     </p>
-                    <!-- добавить шкалу!!! -->
+                  </div>
+                  <div class="range-scale">
+                    <div class="range-bar" style="left: 0; width: 226px">
+                      <button class="range-toggle toggle-min" type="button">
+                        <span class="visually-hidden">Изменить минимальную цену</span>
+                      </button>
+                      <button class="range-toggle toggle-max" type="button">
+                        <span class="visually-hidden">Изменить максимальную цену</span>
+                      </button>
+                    </div>
                   </div>
                 </fieldset>
                 <div class="filter-button-container">
@@ -131,7 +148,7 @@
         </header>
         <section class="sorting-hotels" data-test="catalog">
           <div class="sorting-title-container">
-            <h2 class="sorting-hotels-title">Найдено гостиниц: 38</h2>
+            <h2 class="sorting-hotels-title">Найдено гостиниц: <span class="sorting-hotels-quantity">38</span></h2>
             <div class="sorting-show-container">
               <select class="select-control" aria-label="Сортировка">
                 <option value="cheap">Сначала дешевые</option>
@@ -165,7 +182,7 @@
               </a>
               <div class="cost-hotel">
                 <p class="hotels-card-type">Гостиница</p>
-                <p class="hotels-card-price">От 4000 ₽</p>
+                <p class="hotels-card-price">От <span class="hotels-price">4000</span> ₽</p>
               </div>
               <div class="hotels-button">
                 <a class="hotels-card-button" href="#">подробнее</a>
@@ -174,13 +191,8 @@
               <div class="rating">
                 <p class="hotels-card-stars hotels-stars-4">
                   <span class="visually-hidden">4 звезды.</span>
-                  <!-- теги для прошлого размещения звезд -->
-                  <!-- <span class="stars"></span>
-                  <span class="stars"></span>
-                  <span class="stars"></span>
-                  <span class="stars"></span> -->
                 </p>
-                <p class="hotels-card-rating">Рейтинг: 8,5</p>
+                <p class="hotels-card-rating">Рейтинг: <span class="hotels-rating">8,5</span></p>
               </div>
             </li>
             <li class="hotels-card">
@@ -190,7 +202,7 @@
               </a>
               <div class="cost-hotel">
                 <p class="hotels-card-type">Гостиница</p>
-                <p class="hotels-card-price">От 5000 ₽</p>
+                <p class="hotels-card-price">От <span class="hotels-price">5000</span> ₽</p>
               </div>
               <div class="hotels-button">
                 <a class="hotels-card-button" href="#">подробнее</a>
@@ -199,13 +211,8 @@
               <div class="rating">
                 <p class="hotels-card-stars hotels-stars-4">
                   <span class="visually-hidden">4 звезды.</span>
-                  <!-- теги для прошлого размещения звезд -->
-                  <!-- <span class="stars"></span>
-                  <span class="stars"></span>
-                  <span class="stars"></span>
-                  <span class="stars"></span> -->
                 </p>
-                <p class="hotels-card-rating">Рейтинг: 9,2</p>
+                <p class="hotels-card-rating">Рейтинг: <span class="hotels-rating">9,2</span></p>
               </div>
             </li>
             <li class="hotels-card">
@@ -215,7 +222,7 @@
               </a>
               <div class="cost-hotel">
                 <p class="hotels-card-type">Гостиница</p>
-                <p class="hotels-card-price">От 2500 ₽</p>
+                <p class="hotels-card-price">От <span class="hotels-price">2500</span> ₽</p>
               </div>
               <div class="hotels-button">
                 <a class="hotels-card-button" href="#">подробнее</a>
@@ -224,12 +231,8 @@
               <div class="rating">
                 <p class="hotels-card-stars hotels-stars-3">
                   <span class="visually-hidden">3 звезды.</span>
-                  <!-- теги для прошлого размещения звезд -->
-                  <!-- <span class="stars"></span>
-                  <span class="stars"></span>
-                  <span class="stars"></span> -->
                 </p>
-                <p class="hotels-card-rating">Рейтинг: 6,9</p>
+                <p class="hotels-card-rating">Рейтинг: <span class="hotels-rating">6,9</span></p>
               </div>
             </li>
             <li class="hotels-card">
@@ -239,7 +242,7 @@
               </a>
               <div class="cost-hotel">
                 <p class="hotels-card-type">Гостиница</p>
-                <p class="hotels-card-price">От 1500 ₽</p>
+                <p class="hotels-card-price">От <span class="hotels-price">1500</span> ₽</p>
               </div>
               <div class="hotels-button">
                 <a class="hotels-card-button" href="#">подробнее</a>
@@ -248,11 +251,8 @@
               <div class="rating">
                 <p class="hotels-card-stars hotels-stars-2">
                   <span class="visually-hidden">2 звезды.</span>
-                  <!-- теги для прошлого размещения звезд -->
-                  <!-- <span class="stars"></span>
-                  <span class="stars"></span> -->
                 </p>
-                <p class="hotels-card-rating">Рейтинг: 5,0</p>
+                <p class="hotels-card-rating">Рейтинг: <span class="hotels-rating">5,0</span></p>
               </div>
             </li>
           </ul>
