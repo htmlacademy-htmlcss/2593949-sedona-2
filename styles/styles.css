@@ -968,6 +968,8 @@ main {
   justify-content: space-between;
   align-items: center;
   margin: 0;
+  padding: 0;
+  border: 0;
   gap: 15px;
   flex-wrap: wrap;
 }
@@ -1116,7 +1118,7 @@ main {
   height: 26px;
   background-color: #82b3d3;
   border: none;
-  right: 0;
+  margin-left: 59px;
   padding: 0;
 }
 
