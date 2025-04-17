@@ -39,7 +39,7 @@ body {
   box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2);
 }
 
-main {
+.main {
   flex-grow: 1;
 }
 
@@ -76,6 +76,7 @@ img {
 
 .navigation-logo-link {
   position: absolute;
+  max-width: fit-content;
 }
 
 .navigation-list {
@@ -153,28 +154,26 @@ img {
   background-color: #E5E5E5;
 }
 
-.navigation-user-item:active a {
+.navigation-user-item:active .navigation-user-link {
   background-color: #f2f2f2;
   outline: none;
 }
 
-.navigation-user-link-search {
-  background-position: center;
+.navigation-user-link {
   display: block;
   height: 64px;
-  background-image: url("../images/search.svg");
-  background-repeat: no-repeat;
+  background-position: center;
   background-size: 20px 20px;
+  background-repeat: no-repeat;
+}
+
+.navigation-user-link-search {
+  background-image: url("../images/search.svg");
 }
 
 .navigation-user-link-favourites {
   position: relative;
-  background-position: center;
-  display: block;
-  height: 64px;
   background-image: url("../images/heart.svg");
-  background-repeat: no-repeat;
-  background-size: 20px 20px;
 }
 
 .navigation-user-link-favourites::after {
@@ -2144,11 +2143,14 @@ input[type="radio"]:disabled + .control-label {
 }
 
 .hotels-card-stars {
-  width: 140px;
   height: 37px;
   margin: 0;
   background-image: url("../images/starsprob.svg");
   background-repeat: no-repeat;
+}
+
+.hotels-stars-4 {
+  width: 140px;
 }
 
 .hotels-stars-3 {

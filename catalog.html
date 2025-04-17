@@ -9,7 +9,7 @@
   </head>
   <body>
     <div class="container">
-      <header class="page-header" data-test="header">
+      <header data-test="header">
         <nav class="navigation">
           <a class="navigation-logo" href="index.html">
             <img class="navigation-logo-link" src="images/logo.svg" width="140" height="70" alt="Логотип города Седона.">
@@ -42,7 +42,7 @@
           </ul>
         </nav>
       </header>
-      <main class="main-inner" data-test="main">
+      <main data-test="main">
         <header class="inner-header">
           <div class="inner-header-container">
             <h1 class="inner-header-title">Гостиницы Седоны</h1>
@@ -57,26 +57,26 @@
               </li>
             </ul>
           </div>
-          <section class="filter" data-test="filter">
+          <section data-test="filter">
             <h2 class="visually-hidden">Фильтры.</h2>
             <form class="filter-infrastructure" action="https://echo.htmlacademy.ru/" method="get">
               <div class="filter-infrastructure-container">
                 <fieldset class="filter-infrastructure-group">
                   <legend class="filter-infrastructure-title">Инфраструктура:</legend>
                   <ul class="filter-infrastructure-list">
-                    <li class="filter-infrastructure-item">
+                    <li>
                       <label class="control">
                         <input class="visually-hidden control-input" type="checkbox" name="pool" checked>
                         <span class="control-label">Бассейн</span>
                       </label>
                     </li>
-                    <li class="filter-infrastructure-item">
+                    <li>
                       <label class="control">
                         <input class="visually-hidden control-input" type="checkbox" name="parking" checked>
                         <span class="control-label">Парковка</span>
                       </label>
                     </li>
-                    <li class="filter-infrastructure-item">
+                    <li>
                       <label class="control">
                         <input class="visually-hidden control-input" type="checkbox" name="wifi">
                         <span class="control-label">Wi-Fi</span>
@@ -87,19 +87,19 @@
                 <fieldset class="filter-catalog-group">
                   <legend class="filter-catalog-title">Тип жилья:</legend>
                   <ul class="filter-infrastructure-list">
-                    <li class="filter-infrastructure-item">
+                    <li>
                       <label class="control">
                         <input class="visually-hidden control-input" type="radio" name="housing-type" value="hotel" checked>
                         <span class="control-label control-label-point">Гостиница</span>
                       </label>
                     </li>
-                    <li class="filter-infrastructure-item">
+                    <li>
                       <label class="control">
                         <input class="visually-hidden control-input" type="radio" name="housing-type" value="motel">
                         <span class="control-label control-label-point">Мотель</span>
                       </label>
                     </li>
-                    <li class="filter-infrastructure-item">
+                    <li>
                       <label class="control">
                         <input class="visually-hidden control-input" type="radio" name="housing-type" value="apartments">
                         <span class="control-label control-label-point">Апартаменты</span>
@@ -125,7 +125,7 @@
                   </div>
                   <div class="range-scale">
                     <div class="range-bar" style="left: 0; width: 226px">
-                      <button class="range-toggle toggle-min" type="button">
+                      <button class="range-toggle" type="button">
                         <span class="visually-hidden">Изменить минимальную цену</span>
                       </button>
                       <button class="range-toggle toggle-max" type="button">
@@ -253,23 +253,23 @@
             </li>
           </ul>
           <ul class="pagination-list">
-            <li class="pagination-item">
+            <li>
               <a class="pagination-link pagination-current">1</a>
             </li>
-            <li class="pagination-item">
+            <li>
               <a class="pagination-link" href="#">2</a>
             </li>
-            <li class="pagination-item">
+            <li>
               <a class="pagination-link" href="#">3</a>
             </li>
-            <li class="pagination-item">
+            <li>
               <a class="pagination-link" href="#">4</a>
             </li>
-            <li class="pagination-item">
+            <li>
               <span class="pagination-link pagination-text">...</span>
             </li>
-            <li class="pagination-item">
-              <a class="pagination-link pagination-end" href="#">10</a>
+            <li>
+              <a class="pagination-link" href="#">10</a>
             </li>
           </ul>
         </section>
