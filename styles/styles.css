@@ -54,6 +54,11 @@ main {
   overflow: hidden;
 }
 
+img {
+  max-width: 100%;
+  object-fit: contain;
+}
+
 /* Шапка, главная, каталог */
 
 .navigation {
@@ -177,10 +182,11 @@ main {
   position: absolute;
   top: 11px;
   right: 4px;
-  padding-left: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 20px;
   height: 20px;
-  box-sizing: border-box;
   font-family: "PT Sans", sans-serif;
   font-size: 10px;
   line-height: 10px;
@@ -189,7 +195,6 @@ main {
   color: #ffffff;
   border-radius: 50%;
   background-color: #7db54f;
-  align-content: center;
 }
 
 .header-button {
@@ -682,10 +687,6 @@ main {
   color: #ffffff;
   background-color: #E5E5E5;
   outline: none;
-}
-
-.e-mail:invalid {
-  outline: 1px solid #FF5757;
 }
 
 .subscribe-button {
